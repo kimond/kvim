@@ -1,13 +1,14 @@
 # kvim
 
 ## Getting started
+
 Update your init.lua with
 
 ```lua
 require("lazy").setup({
   spec = {
      ...
-    { "kimond/kvim", import = "kvim.plugins" },
+    { "kvimcrew/kvim", import = "kvim.plugins" },
      ...
   },
 })
