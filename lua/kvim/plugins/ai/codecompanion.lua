@@ -1,9 +1,11 @@
 return {
 	{
 		"olimorris/codecompanion.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
+			"franco-ruggeri/codecompanion-spinner.nvim",
 		},
 		keys = {
 			{
@@ -26,6 +28,9 @@ return {
 			},
 		},
 		opts = {
+			extensions = {
+				spinner = {},
+			},
 			strategies = {
 				chat = { adapter = "gemini" },
 				inline = {
@@ -92,7 +97,7 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		opts = function(_, opts)
-			table.insert(opts.sections.lualine_x, require("utils.codecompanion_status"))
+			table.insert(opts.sections.lualine_x, 2, require("kvim.util.codecompanion_status"))
 		end,
 	},
 }

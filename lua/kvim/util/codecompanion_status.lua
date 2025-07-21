@@ -40,7 +40,7 @@ end
 function M:update_status()
 	if self.processing then
 		self.spinner_index = (self.spinner_index % spinner_symbols_len) + 1
-		return spinner_symbols[self.spinner_index]
+		return "🤖 " .. spinner_symbols[self.spinner_index]
 	else
 		return nil
 	end
