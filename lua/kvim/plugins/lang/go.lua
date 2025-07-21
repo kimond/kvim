@@ -8,6 +8,8 @@ vim.api.nvim_create_user_command("Golines", function()
 	})
 end, {})
 
+vim.filetype.add({ extension = { templ = "templ" } })
+
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -80,7 +82,7 @@ return {
 	-- Ensure Go tools are installed
 	{
 		"mason-org/mason.nvim",
-		opts = { ensure_installed = { "goimports", "gofumpt", "golangci-lint", "golines" } },
+		opts = { ensure_installed = { "goimports", "gofumpt", "golangci-lint", "golines", "templ" } },
 	},
 	{
 		"nvimtools/none-ls.nvim",
