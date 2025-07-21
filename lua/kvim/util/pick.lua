@@ -14,7 +14,7 @@ local M = setmetatable({}, {
 
 ---@class LazyPicker
 ---@field name string
----@field open fun(command:string, opts?:lazyvim.util.pick.Opts)
+---@field open fun(command:string, opts?:kvim.util.pick.Opts)
 ---@field commands table<string, string>
 
 ---@type LazyPicker?
@@ -64,7 +64,7 @@ function M.open(command, opts)
 end
 
 ---@param command? string
----@param opts? lazyvim.util.pick.Opts
+---@param opts? kvim.util.pick.Opts
 function M.wrap(command, opts)
 	opts = opts or {}
 	return function()
