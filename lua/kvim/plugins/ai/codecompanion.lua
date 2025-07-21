@@ -5,7 +5,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
-			-- "franco-ruggeri/codecompanion-spinner.nvim",
+			"franco-ruggeri/codecompanion-spinner.nvim",
 		},
 		keys = {
 			{
@@ -28,9 +28,9 @@ return {
 			},
 		},
 		opts = {
-			-- extensions = {
-			-- 	spinner = {},
-			-- },
+			extensions = {
+				spinner = {},
+			},
 			strategies = {
 				chat = { adapter = "gemini" },
 				inline = {
